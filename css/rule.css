@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(43, 44, 48);
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+  color: black;
+  font-size: 20px;
+}
+
+button {
+  width: 200px;
+  padding: 10px;
+}
+
+p {
+  line-height: 26px;
+  margin-bottom: 20px;
+}
+
+main {
+  margin: 40px 120px;
+  padding: 30px;
+  background-color: white;
+}
+
+.about {
+  margin-bottom: 70px;
+}
+
+
+.move-mode-box {
+  margin-bottom: 70px;
+}
+
+.word-mode-box {
+  margin-bottom: 70px;
+}
+
+.score-box {
+  margin-bottom: 70px;
+}

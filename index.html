@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Tetriping テトリス型タイピングゲーム</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="mode-background-wrapper">
+    <div class="main-wrapper">
+      <div class="score-wrapper">
+        <div class="score-box">
+          <div class="score-item-wrapper">
+            <p class="score-title">スコア</p>
+            <p class="score-count">0</p>
+          </div>   
+          <div class="score-item-wrapper">
+            <p class="line-score-title">ライン</p>
+             <p class="line-score-count">0</p>
+          </div>   
+          <div class="score-item-wrapper">
+            <p class="word-score-title">ワード</p>
+            <p class="word-score-count">0</p>
+          </div>   
+          <div class="score-item-wrapper">
+            <p class="level-score-title">レベル</p>
+            <p class="level-score-count">1</p>
+          </div>   
+
+          <div class="play-key-box">
+            <div class="play-item-wrapper">
+              <p class="key-title">ソフトドロップ</p>
+              <p class="key-indicater">S (s + shift)</p>
+            </div>
+            <div class="play-item-wrapper">
+              <p class="key-title">ハードドロップ</p>
+              <p class="key-indicater">H (h + shift)</p>
+            </div>
+            <div class="play-item-wrapper">
+              <p class="key-title">選択リセット</p>
+              <p class="key-indicater">C (c + shift)</p>
+            </div>
+            <div class="play-item-wrapper">
+              <p class="key-title">モード切り替え</p>
+              <p class="key-indicater">スペース</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tetris-wrapper selected">
+        <div class="move-vocubrarys-board"></div>
+        <div class="tetris-board"></div>
+      </div>
+
+      <p class="word-missed-score">0</p>
+
+      <div class="select-word-wrapper select">
+        <div class="select-word-board"></div>
+      </div>
+    </div>
+
+    <div class="start-select-display">
+      <div class="start-select-wrapper">
+        <h1 class="title">
+          <div class="title-char-wrapper">
+            <span class="T">T</span>
+            <span class="e">e</span>
+            <span class="t">t</span>
+            <span class="r">r</span>
+            <span class="i">i</span>
+            <span class="p">p</span>
+            <span class="i">i</span>
+            <span class="n">n</span>
+            <span class="g">g</span>
+          </div>
+        </h1>
+      </div>
+
+      <div class="button-wrapper">
+        <button class="play-button">スタート</button>
+      </div>
+      <div class="button-wrapper">
+        <button class="rule-explain-button">
+          <a href="./rule.html">ルール</a>
+        </button>
+      </div>
+    </div>
+
+    <div class="start-anime-display">
+      <div class="start-anime-box">
+        <div class="number">3</div>
+      </div>
+    </div>
+    <div class="start-message">スタート</div>
+
+    <div class="alret-fix-Caps-Lock"></div>
+
+    <div class="game-over-modal">
+      <div class="game-over-message">ゲームオーバー</div>
+      <button class="play-again-button">もう一度プレイする</button>
+    </div>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+</html>
