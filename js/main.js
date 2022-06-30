@@ -510,6 +510,7 @@ function controlMove({ key }) {
   if(!currentTargetAlpabets) return;
   typeMoveAlpabet({ key })
 
+  tetrisWrapper.style.background = "";
   if(key === "H") hardDrop();
   if(key === "S") softDrop();
 }
@@ -570,7 +571,6 @@ function convertMino(mino) {
   }
 }
 
-// draw functions
 function drawMino(cells, mino) {
   const { index: minoIndex, shape } = mino;
 
@@ -705,7 +705,6 @@ function checkColide(mino) {
   }
 }
 
-// select word
 
 function addCharsCanTyping(word, wordBox) {
   wordBox.textContent = null;
@@ -1129,6 +1128,7 @@ addEventListener("keydown", toggleMode)
 addEventListener("keydown", indicateMove)
 addEventListener("keydown", e => { 
   if(e.key === "C") {
+    tetrisWrapper.style.background = "";
     resetCurrentItem();
     missedCount++;
     displayMissedScore();
