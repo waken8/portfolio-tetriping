@@ -586,12 +586,12 @@ function undrawMino(cells, mino) {
 }
 
 function drawShadowMino(preparedMino) {
-  const { index: minoIndex, shape } = preparedMino;
+  const { index: minoIndex } = preparedMino;
   const drawnMinoIndex = minoIndex.map(index => index + currentPosition);
 
   drawnMinoIndex.filter(index => {
     if(index != currentPosition) {
-      tetrisCells[index].style.background = "#ccc"
+      tetrisCells[index].style.background = "#ccc";
     } 
   })
 }
@@ -603,7 +603,6 @@ function undrawShadowMinos() {
 
 
 function update() {
-  // undrawColideShadowMino();
   dropMino();
   indicateCanTypeKey();
   checkLevel();
@@ -634,6 +633,8 @@ function dropMino() {
   if(checkCalctype(preparedMino)) {
     undrawShadowMinos();
     drawShadowMino(preparedMino);
+  } else {
+    undrawShadowMinos();
   }
 }
 
@@ -1069,6 +1070,7 @@ function startAnimeNumber() {
 }
 
 function resetAllState() {
+  selectedWrapper();
   moveCells[currentTypedIndex].style.background = "";
   tetrisCells = Array.from(document.querySelectorAll(".tetris-cell"));
   isGameOver = false;
@@ -1095,7 +1097,6 @@ function resetAllState() {
   wordScoreDisplay.textContent = deletedWordScore;
   levelScoreDisplay.textContent = currentLevel;
   missCountDisplay.textContent = missedCount;
-  
 
   startNumber = 3;
   startAnimeTimer = null;
@@ -1140,3 +1141,6 @@ startButton.addEventListener("click", () => {
   startSelectDisplay.style.display = "none";
   startAnimeNumber();
 });
+
+
+
