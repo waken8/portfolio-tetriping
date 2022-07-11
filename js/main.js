@@ -454,14 +454,14 @@ function checkLevel() {
 }
 
 function displayLevelScore() {
-  levelScoreDisplay.textContent = null;
+  levelScoreDisplay.textContent = "";
   levelScoreDisplay.textContent = currentLevel;
 }
 
 function displayScore() {
-  totalScoreDisplay.textContent = null;
-  lineScoreDisplay.textContent = null;
-  wordScoreDisplay.textContent = null;
+  totalScoreDisplay.textContent = "";
+  lineScoreDisplay.textContent = "";
+  wordScoreDisplay.textContent = "";
 
   totalScoreDisplay.textContent = totalScore;
   lineScoreDisplay.textContent = deletedLineScore;
@@ -597,7 +597,7 @@ function drawShadowMino(preparedMino) {
 }
 
 function undrawShadowMinos() {
-  tetrisCells.forEach(cell => cell.style.background = null);
+  tetrisCells.forEach(cell => cell.style.background = "");
   tetrisCells.forEach(cell => cell.classList.remove("colide-shadow"));
 }
 
@@ -707,7 +707,7 @@ function checkColide(mino) {
 
 
 function addCharsCanTyping(word, wordBox) {
-  wordBox.textContent = null;
+  wordBox.textContent = "";
 
   for(let char of word) {
     const span = document.createElement("span");
@@ -732,7 +732,7 @@ function updateStyleTarget(index) {
 }
 
 function displayMissedScore() {
-  missCountDisplay.textContent = null;
+  missCountDisplay.textContent = "";
   missCountDisplay.textContent = missedCount;
 }
 
