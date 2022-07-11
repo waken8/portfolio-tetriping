@@ -486,10 +486,11 @@ function indicateMoveChar() {
   }, 100)
 }
 
+
 function typeMoveAlpabet({ key }) {
   if(currentMino.shape != "M") return;
 
-  moveCells.forEach(cell => cell.style.background = null);
+  moveCells.forEach(cell => cell.style.background = "");
 
   if(currentTargetAlpabets.includes(key)) {
     currentTypedIndex = currentTargetAlpabets.indexOf(key);
@@ -500,7 +501,7 @@ function typeMoveAlpabet({ key }) {
       indicateMoveChar();
     }
   } else {
-    indicateMoveChar();
+      indicateMoveChar();
   }
 
   moveCells[currentTypedIndex].style.background = baseColor;
@@ -510,9 +511,23 @@ function controlMove({ key }) {
   if(!currentTargetAlpabets) return;
   typeMoveAlpabet({ key })
 
-  tetrisWrapper.style.background = "";
-  if(key === "H") hardDrop();
-  if(key === "S") softDrop();
+  if(key === "Shift") {
+    tetrisWrapper.style.background = "";
+  }
+
+  if(key === "H") {
+    tetrisWrapper.style.background = "";
+    hardDrop();
+  } 
+  
+  if(key === "S") {
+    tetrisWrapper.style.background = "";
+    softDrop();
+  } 
+
+  if(key === "C") {
+    tetrisWrapper.style.background = "";
+  }
 }
 
 function moveMino() {
@@ -1029,17 +1044,12 @@ function setWordMode() {
 function toggleMode({ key }) {
   if(key === " ") currentModeFlag = !currentModeFlag;
 
+  tetrisWrapper.style.background = "";
   changeStyleBaseColide(currentModeFlag);
   if(currentModeFlag) {
     setMoveMode();
   } else {
     setWordMode();
-  }
-}
-
-function indicateMove() {
-  if(currentModeFlag && currentMino.shape != "M") {
-    indicateMoveChar();
   }
 }
 
@@ -1127,10 +1137,8 @@ function gameRestart() {
 
 
 addEventListener("keydown", toggleMode)
-addEventListener("keydown", indicateMove)
 addEventListener("keydown", e => { 
   if(e.key === "C") {
-    tetrisWrapper.style.background = "";
     resetCurrentItem();
     missedCount++;
     displayMissedScore();
