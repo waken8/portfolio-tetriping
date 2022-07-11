@@ -612,6 +612,7 @@ function update() {
     clearInterval(gameTimer);
 
     gameOverDisplay.style.display = "block";
+    displayResult();
     playButton.addEventListener("click", e => {
       gameOverDisplay.style.display = "none";
     })
@@ -1143,4 +1144,24 @@ startButton.addEventListener("click", () => {
 });
 
 
+function displayResult() {
+  const resultScoreDisplay = document.querySelector(".result-score");
+  const resultBestScoreDisplay = document.querySelector(".result-best-score");
+  const resultTotalScore = totalScore;
+  resultScoreDisplay.textContent = "今回のスコア " + resultTotalScore;
 
+  if(localStorage.getItem("bestScore")) {
+    const bestScore = localStorage.getItem("bestScore");
+
+    if(resultTotalScore > Number(bestScore)) {
+      resultBestScoreDisplay.textContent = "最高スコア " + resultTotalScore;
+      localStorage.setItem("bestScore", resultTotalScore);
+    } else {
+      resultBestScoreDisplay.textContent = "最高スコア " + Number(bestScore);
+    }
+
+  } else {
+    resultBestScoreDisplay.textContent = "最高スコア " + resultTotalScore;
+    localStorage.setItem("bestScore", resultTotalScore);
+  }
+}

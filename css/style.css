@@ -371,7 +371,23 @@ a {
 }
 
 .game-over-message  {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
+}
+
+.result-box {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.result-score {
+  color: white;
+  font-size: 24px;
+}
+
+.result-best-score {
+  color: white;
+  font-size: 24px;
 }
 
 .play-again-button {
@@ -383,4 +399,5 @@ a {
 .play-again-button:hover { 
   background-color: rgb(245, 115, 39);
 }
+
 
