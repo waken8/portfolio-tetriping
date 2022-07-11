@@ -1,7 +1,19 @@
+:root {
+  --base-color: rgb(250, 159, 102);
+  --color-L: rgb(245, 115, 39);
+  --color-J: rgb(5, 8, 166);
+  --color-T: rgb(144, 109, 214);
+  --color-S: rgb(37, 120, 12);
+  --color-Z: rgb(173, 54, 72);
+  --color-O: rgb(236, 240, 31);
+  --color-I: rgb(90, 232, 230);
+}
+
 * {
   margin: 0;
   padding: 0;
 }
+
 
 body {
   margin: 0;
@@ -72,7 +84,7 @@ a {
 }
 
 .tetris-wrapper.selected {
-  background-color: rgb(250, 159, 102);
+  background-color: var(--base-color);
 }
 
 .tetris-board {
@@ -92,35 +104,35 @@ a {
 }
 
 .tetris-cell.M {
-  background-color: rgb(250, 159, 102);
+  background-color: var(--base-color);
 }
 
 .tetris-cell.L {
-  background-color: rgb(245, 115, 39);
+  background-color: var(--color-L);
 }
 
 .tetris-cell.J {
-  background-color: rgb(5, 8, 166);
+  background-color: var(--color-J);
 }
 
 .tetris-cell.T {
-  background-color: rgb(144, 109, 214);
+  background-color: var(--color-T);
 }
 
 .tetris-cell.S {
-  background-color: rgb(37, 120, 12);
+  background-color: var(--color-S);
 }
 
 .tetris-cell.Z {
-  background-color: rgb(173, 54, 72);
+  background-color: var(--color-Z);
 }
 
 .tetris-cell.O {
-  background-color: rgb(236, 240, 31);
+  background-color: var(--color-O);
 }
 
 .tetris-cell.I {
-  background-color: rgb(90, 232, 230);
+  background-color: var(--color-I);
 }
 
 .colide-shadow {
@@ -135,7 +147,7 @@ a {
 }
 
 .select-word-wrapper.selected {
-  background-color: rgb(250, 159, 102);
+  background-color: var(--base-color);
 }
 
 .word-missed-score {
@@ -148,7 +160,7 @@ a {
 }
 
 .typed {
-  color: rgb(250, 159, 102);
+  color: var(--base-color);
 }
 
 .select-word-board {
@@ -185,31 +197,31 @@ a {
 }
 
 .mini-board-cell.L {
-  background-color: rgb(245, 115, 39);
+  background-color: var(--color-L);
 }
 
 .mini-board-cell.J {
-  background-color: rgb(5, 8, 166);
+  background-color: var(--color-J);
 }
 
 .mini-board-cell.T {
-  background-color: rgb(144, 109, 214);
+  background-color: var(--color-T);
 }
 
 .mini-board-cell.S {
-  background-color: rgb(37, 120, 12);
+  background-color: var(--color-S);
 }
 
 .mini-board-cell.Z {
-  background-color: rgb(173, 54, 72);
+  background-color: var(--color-Z);
 }
 
 .mini-board-cell.O {
-  background-color: rgb(236, 240, 31);
+  background-color: var(--color-O);
 }
 
 .mini-board-cell.I {
-  background-color: rgb(90, 232, 230);
+  background-color: var(--color-I);
 }
 
 .word-box {
@@ -366,11 +378,3 @@ a {
   margin: 0 auto;
 }
 
-.alret-fix-Caps-Lock {
-  color: red;
-  font-size: 24px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
